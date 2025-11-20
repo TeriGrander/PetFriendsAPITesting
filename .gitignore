@@ -1,1 +1,6 @@
 .env
+.pytest.ini
+tests/__pycache__/test_petfriends.cpython-313-pytest-8.4.2.pyc
+__pycache__/settings.cpython-313.pyc
+__pycache__/api.cpython-313.pyc
+.vscode/settings.json
