@@ -15,7 +15,9 @@ class PetFriends():
             'email': email,
             'password': password
         }
+
         res = requests.get(self.base_url + endpoint_url, headers=headers)
+
         status = res.status_code
         result = ''
         try:
@@ -32,7 +34,9 @@ class PetFriends():
         endpoint_url = 'api/pets'
         header = {'auth_key': auth_key['key']}
         params = {'filter': filter}
+
         res = requests.get(self.base_url + endpoint_url, headers=header, params=params)
+
         status = res.status_code
         result = ''
         try:
@@ -56,7 +60,9 @@ class PetFriends():
                 'age': pet_age
                 }
         file = {'pet_photo': (pet_image, open(pet_image, 'rb'), 'image/jpeg')}
+
         res = requests.post(self.base_url + endpoint_url, headers=header, data=data, files=file)
+
         status = res.status_code
         result = ''
         try:
@@ -71,8 +77,9 @@ class PetFriends():
 
         endpoint_url = 'api/pets' + '/' + pet_id
         header = {'auth_key': auth_key['key']}
-        # params = {}
+
         res = requests.delete(self.base_url + endpoint_url, headers=header)
+
         status = res.status_code
         return status
 
@@ -83,7 +90,9 @@ class PetFriends():
         endpoint_url = 'api/pets' + '/' + pet_id
         header = {'auth_key': auth_key['key']}
         params = {'name': pet_name, 'age': pet_age, 'animal_type': pet_type }
+
         res = requests.put(self.base_url + endpoint_url, headers=header, data=params)
+        
         status = res.status_code
         result = ''
         try:
