@@ -207,7 +207,7 @@ def test_add_pet_photo_for_existing_pet(image='tests/images/cat2.jpg'):
 
 
 def test_add_pet_photo_for_non_existing_pet(image='tests/images/cat2.jpg'):
-    """Проверяем, к несуществующему питомцу фото не добавляется."""
+    """Проверяем, что к несуществующему питомцу фото не добавляется."""
 
     _, auth_key = pf.get_api_key(valid_email, valid_password)
 
